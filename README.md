@@ -8,3 +8,10 @@
 
 # To view the application in a working status visit here
  - https://to-do-node-app-client-06rjt.kinsta.app/
+
+1. Login/Signup in the login form.
+2. If you are a new user, create one, else just login with your credentials
+3. Once propmted. you'll be able to add in your tasks using the create button, delete a task using the same delete button 
+4. Once you're done with the project, you can sign out using sign out button.
+
+## Tech Stack - React, Node JS, Express, PostgresSQl, Kinsta
