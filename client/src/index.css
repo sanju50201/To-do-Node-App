@@ -1,14 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(236, 243, 248);
+  background-color: #e9e3f5;
   display: flex;
   justify-content: center;
   font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
 .app {
-  background-color: rgb(255, 255, 255);
+  background-color: #f9f5e7;
   box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
   border-radius: 10px;
   padding: 10px;
@@ -30,19 +30,19 @@ body {
 }
 
 .edit {
-  border: 1.5px solid rgb(141, 181, 145);
-  color: rgb(141, 181, 145);
+  border: 1.5px solid rgb(130, 67, 212);
+  color: rgb(160, 144, 219);
   background-color: transparent;
   text-transform: uppercase;
 }
 .edit:hover {
-  background-color: rgb(182, 223, 186);
+  background-color: rgb(214, 204, 236);
 }
 
 .edit:active {
-  border: 1.5px solid rgb(141, 181, 145);
+  border: 1.5px solid rgb(180, 148, 221);
   color: rgb(255, 255, 255);
-  background-color: rgb(141, 181, 145);
+  background-color: rgb(160, 144, 219);
 }
 
 .delete {
@@ -89,11 +89,11 @@ body {
   color: rgb(255, 255, 255);
 }
 
-input{
+input {
   margin: 11px 0;
   padding: 12px 16px;
   border-radius: 12px;
-  border: 1.5px solid rgb(230,232,236);
+  border: 1.5px solid rgb(230, 232, 236);
 }
 /* List Header */
 .listHeader {
@@ -165,4 +165,65 @@ input{
 
 .modal label {
   font-size: 13px;
+}
+
+/* Auth  */
+
+.authContainer {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+.authContainerBox {
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+}
+
+.authContainerBox form {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  padding: 20px;
+}
+
+.authOptions {
+  display: flex;
+}
+
+.authOptions button {
+  width: 50%;
+  border: none;
+  padding: 10px;
+  color: rgb(35, 38, 47);
+}
+
+.copyright {
+  font-size: 13px;
+  margin: 10px;
+  color: rgb(114, 114, 114);
+}
+.userEmail {
+  float: right;
+  font-size: 13px;
+  margin: 10px;
+  color: rgb(114, 114, 114);
+}
+
+/* Progress Bar */
+
+.outerBar {
+  width: 200px;
+  height: 14px;
+  background-color: rgb(216, 216, 216);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.innerBar {
+  height: 14px;
+}
+.taskTitle {
+  width: 300px;
 }

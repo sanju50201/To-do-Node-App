@@ -8,9 +8,12 @@ const ListItem = ({ task, getData }) => {
 
   const deleteItem = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${task.id}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_SERVERURL}/todos/${task.id}`,
+        {
+          method: "DELETE",
+        }
+      );
       if (response.status === 200) {
         getData();
       }
@@ -24,7 +27,7 @@ const ListItem = ({ task, getData }) => {
       <div className="infoContainer">
         <TickIcon />
         <p className="taskTitle">{task.title}</p>
-        <ProgressBar />
+        <ProgressBar progress={task.progress} />
       </div>
 
       <div className="buttonContainer">

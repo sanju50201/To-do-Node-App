@@ -1,9 +1,11 @@
 import { useState } from "react";
-
+import { useCookies } from "react-cookie";
+import { RxCross2 } from "react-icons/rx";
 const Modal = ({ mode, setShowModal, getData, task }) => {
+  const [cookies, setCookie, removeCookie] = useCookies(null);
   const editMode = mode === "edit" ? true : false;
   const [data, setData] = useState({
-    user_email: editMode ? task.user_email : "sanjithk@test.com",
+    user_email: editMode ? task.user_email : cookies.Email,
     title: editMode ? task.title : null,
     progress: editMode ? task.progress : 50,
     date: editMode ? task.date : new Date(),
@@ -62,7 +64,9 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
       <div className="modal">
         <div className="formTitleContainer">
           <h3>Let's {mode} your task.</h3>
-          <button onClick={() => setShowModal(false)}>X</button>
+          <button onClick={() => setShowModal(false)}>
+            <RxCross2 />
+          </button>
         </div>
         <form>
           <input
